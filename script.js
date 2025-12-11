@@ -48,11 +48,12 @@ nameTitle.addEventListener('click', () => {
 // ============================================
 // KONAMI CODE EASTER EGG
 // ============================================
-const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
 let konamiIndex = 0;
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === konamiCode[konamiIndex]) {
+    const key = e.key.startsWith('Arrow') ? e.key : e.code;
+    if (key === konamiCode[konamiIndex]) {
         konamiIndex++;
         if (konamiIndex === konamiCode.length) {
             activateMatrixRain();
@@ -238,15 +239,19 @@ function initSnakeGame() {
     }
     
     function generateFood() {
-        food = {
-            x: Math.floor(Math.random() * tileCount),
-            y: Math.floor(Math.random() * tileCount)
-        };
+        let attempts = 0;
+        const maxAttempts = 100;
         
-        // Make sure food doesn't spawn on snake
-        if (snake.some(segment => segment.x === food.x && segment.y === food.y)) {
-            generateFood();
-        }
+        do {
+            food = {
+                x: Math.floor(Math.random() * tileCount),
+                y: Math.floor(Math.random() * tileCount)
+            };
+            attempts++;
+        } while (
+            snake.some(segment => segment.x === food.x && segment.y === food.y) && 
+            attempts < maxAttempts
+        );
     }
     
     function gameOver() {
@@ -434,12 +439,20 @@ function initPongGame() {
         // Ball collision with paddles
         if (ballX <= 30 && ballY >= playerY && ballY <= playerY + paddleHeight) {
             ballSpeedX = -ballSpeedX;
-            ballSpeedX *= 1.05; // Increase speed slightly
+            // Increase speed slightly but cap at maximum
+            const maxSpeed = 12;
+            if (Math.abs(ballSpeedX) < maxSpeed) {
+                ballSpeedX *= 1.05;
+            }
         }
         
         if (ballX >= canvas.width - 30 && ballY >= cpuY && ballY <= cpuY + paddleHeight) {
             ballSpeedX = -ballSpeedX;
-            ballSpeedX *= 1.05;
+            // Increase speed slightly but cap at maximum
+            const maxSpeed = 12;
+            if (Math.abs(ballSpeedX) < maxSpeed) {
+                ballSpeedX *= 1.05;
+            }
         }
         
         // Scoring
@@ -525,7 +538,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 100) {
+        if (window.scrollY >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
