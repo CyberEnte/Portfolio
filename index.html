@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Glisnik - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Matrix rain canvas (hidden by default) -->
+    <canvas id="matrix-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">SG</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Simon Glisnik" id="name-title">Simon Glisnik</h1>
+            <p class="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Simon Glisnik, a passionate full-stack developer with a love for creating innovative solutions and interactive experiences.</p>
+                    <p>I specialize in building modern web applications with cutting-edge technologies. When I'm not coding, you can find me exploring new tech trends, playing games, or working on creative side projects.</p>
+                    <p class="easter-egg-hint">💡 Tip: Try exploring the site - there might be some hidden surprises!</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>∞</h3>
+                        <p>Lines of Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Top Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🚀</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured online shopping platform with real-time inventory management and payment integration.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📱</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Media Dashboard</h3>
+                        <p>Analytics dashboard for managing multiple social media accounts with real-time data visualization.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🤖</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chat Assistant</h3>
+                        <p>Intelligent chatbot with natural language processing capabilities for customer support automation.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🎮</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Game Development Suite</h3>
+                        <p>Collection of browser-based games with leaderboards and multiplayer functionality.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📊</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Visualization Tool</h3>
+                        <p>Interactive data visualization platform for creating custom charts and dashboards.</p>
+                        <div class="project-tags">
+                            <span class="tag">D3.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🔒</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Security Monitoring System</h3>
+                        <p>Real-time security monitoring and alerting system for web applications.</p>
+                        <div class="project-tags">
+                            <span class="tag">Go</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML5/CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Vue.js</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Go</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">GraphQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Kubernetes</span>
+                        <span class="skill-item">CI/CD</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games">
+        <div class="container">
+            <h2 class="section-title">Mini Games</h2>
+            <p class="games-intro">Take a break and enjoy some fun games!</p>
+            <div class="games-menu">
+                <button class="game-btn" data-game="snake">🐍 Snake Game</button>
+                <button class="game-btn" data-game="memory">🎴 Memory Cards</button>
+                <button class="game-btn" id="secret-game-btn" style="display: none;">🎯 Secret Game</button>
+            </div>
+            
+            <!-- Snake Game -->
+            <div id="snake-game" class="game-container" style="display: none;">
+                <div class="game-header">
+                    <h3>Snake Game</h3>
+                    <button class="close-game">×</button>
+                </div>
+                <div class="game-info">
+                    <span>Score: <span id="snake-score">0</span></span>
+                    <span>High Score: <span id="snake-high-score">0</span></span>
+                </div>
+                <canvas id="snake-canvas" width="400" height="400"></canvas>
+                <div class="game-controls">
+                    <p>Use Arrow Keys to control the snake</p>
+                    <button id="snake-restart">Restart</button>
+                </div>
+            </div>
+
+            <!-- Memory Game -->
+            <div id="memory-game" class="game-container" style="display: none;">
+                <div class="game-header">
+                    <h3>Memory Cards</h3>
+                    <button class="close-game">×</button>
+                </div>
+                <div class="game-info">
+                    <span>Moves: <span id="memory-moves">0</span></span>
+                    <span>Pairs: <span id="memory-pairs">0</span>/8</span>
+                </div>
+                <div id="memory-board"></div>
+                <div class="game-controls">
+                    <button id="memory-restart">Restart</button>
+                </div>
+            </div>
+
+            <!-- Secret Game (Pong) -->
+            <div id="secret-game" class="game-container" style="display: none;">
+                <div class="game-header">
+                    <h3>🎉 Secret Pong Game! 🎉</h3>
+                    <button class="close-game">×</button>
+                </div>
+                <div class="game-info">
+                    <span>Your Score: <span id="pong-player-score">0</span></span>
+                    <span>CPU Score: <span id="pong-cpu-score">0</span></span>
+                </div>
+                <canvas id="pong-canvas" width="600" height="400"></canvas>
+                <div class="game-controls">
+                    <p>Use W/S keys or Mouse to move your paddle</p>
+                    <button id="pong-restart">Restart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:simon@example.com" class="contact-method">
+                            <span class="icon">📧</span>
+                            <span>simon@example.com</span>
+                        </a>
+                        <a href="https://github.com/simonglisnik" class="contact-method" target="_blank">
+                            <span class="icon">💻</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/simonglisnik" class="contact-method" target="_blank">
+                            <span class="icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Simon Glisnik. All rights reserved.</p>
+            <p class="footer-hint">💡 Try the Konami Code for a surprise!</p>
+            <p class="click-counter" style="display: none;">Secret clicks: <span id="click-count">0</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
